@@ -1,4 +1,5 @@
 ﻿using EGSIT.Core;
+using EGSIT.Core.Exceptions;
 
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Interop;
 using System.Windows.Threading;
 
 namespace EGSIT.UI;
@@ -24,6 +26,12 @@ public partial class App : Application
 
 	private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
 	{
+		if (e.Exception is EpicGamesException egex)
+		{
+			e.Handled = true;
+			HandleUncaughtEpicException(egex);
+			return;
+		}
 		if (Core.Globals.IsDebugMode)
 			e.Handled = true;
 		else
@@ -45,6 +53,16 @@ public partial class App : Application
 			{
 				Application.Current.Shutdown();
 			}
+		}
+	}
+
+	public static void HandleUncaughtEpicException(EpicGamesException ex)
+	{
+		if (ex.ErrorCode == EpicGamesErrorCode.LibraryAccessWhileEGLRunning)
+		{			
+			MessageBox.Show(Current.MainWindow,Globals.EglIsRunningKillNowMsg);
+			Utils.KillEGLProcesses();
+			Utils.WaitUntilEGLClosedAsync().Wait(1000);
 		}
 	}
 }

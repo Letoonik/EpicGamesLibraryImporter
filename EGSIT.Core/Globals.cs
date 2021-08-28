@@ -20,7 +20,11 @@ public static class Globals
 	/// </summary>
 	public static bool IsRunningFromUIApp;
 
+	public static bool EnableEGLRunStateCheck = true;
+
 	public const string EglIsRunningMsg = "EpicGamesLauncher is running. It needs to be closed to prevent access conflicts.";
+	public const string EglIsRunningKillNowMsg = "EpicGamesLauncher is running. EGSIT has to kill the process before you can retry.\rAccept when you're ready to continue.";
+
 
 	public static string InstalledJSONPath => Path.Combine(Environment.GetFolderPath(
 		Environment.SpecialFolder.CommonApplicationData), @"Epic\UnrealEngineLauncher", "LauncherInstalled.dat");

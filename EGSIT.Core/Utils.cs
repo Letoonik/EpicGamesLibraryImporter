@@ -17,6 +17,12 @@ public static class Utils
 		return processes.Any();
 	}
 
+	public static void KillEGLProcesses()
+	{
+		var processes = Process.GetProcessesByName(EGLProcessName);
+		processes.ToList().ForEach(x=> x.Kill(true));
+	}
+
 	public static async Task WaitUntilEGLClosedAsync()
 	{
 		while (CheckIfEGLIsRunning())

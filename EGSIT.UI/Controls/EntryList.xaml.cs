@@ -1,4 +1,5 @@
 ﻿using EGSIT.Core;
+using EGSIT.Core.Exceptions;
 using EGSIT.Core.FileHandling;
 
 using System;
@@ -36,8 +37,15 @@ public partial class EntryList : UserControl
 
 	private void InitManager()
 	{
-		m_entryManager.Initialize();
-
+		try
+		{
+			m_entryManager.Initialize();
+		}
+		catch (EpicGamesException ex) when (ex.ErrorCode == EpicGamesErrorCode.LibraryAccessWhileEGLRunning)
+		{
+			App.HandleUncaughtEpicException(ex);
+			InitManager();
+		}
 	}
 
 	private async void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -61,7 +69,15 @@ public partial class EntryList : UserControl
 	public void SaveToFile( string fullPath = @"C:\ProgramData\Epic\UnrealEngineLauncher\ExportTest.dat")
 	{
 		var selectedEntries = m_entryManager.AllEntries;
-		m_entryManager.SaveToFile(selectedEntries, fullPath);
+		try
+		{
+			m_entryManager.SaveToFile(selectedEntries, fullPath);
+		}
+		catch (EpicGamesException ex) when (ex.ErrorCode == EpicGamesErrorCode.LibraryAccessWhileEGLRunning)
+		{
+			App.HandleUncaughtEpicException(ex);
+			SaveToFile(fullPath);
+		}
 	}
 }
 

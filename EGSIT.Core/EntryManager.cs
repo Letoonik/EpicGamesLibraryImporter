@@ -41,9 +41,9 @@ public class EntryManager
 			// Make sure you ran the EPic Games Launcher at least once and you have sufficent access rights.
 		}
 
-		if (Utils.CheckIfEGLIsRunning())
+		if (Globals.EnableEGLRunStateCheck && Utils.CheckIfEGLIsRunning())
 		{
-			if (Globals.IsRunningFromUIApp && !Globals.IsDebugMode)
+			if (Globals.IsRunningFromUIApp)
 				throw new EpicGamesException(Globals.EglIsRunningMsg) { ErrorCode = EpicGamesErrorCode.LibraryAccessWhileEGLRunning };
 		}
 
@@ -84,9 +84,9 @@ public class EntryManager
 
 	public void SaveToFile(IEnumerable<GameEntry> selectedEntries, string fullPath = @"C:\ProgramData\Epic\UnrealEngineLauncher\ExportTest.dat")
 	{
-		if (Utils.CheckIfEGLIsRunning())
+		if (Globals.EnableEGLRunStateCheck && Utils.CheckIfEGLIsRunning())
 		{
-			if (Globals.IsRunningFromUIApp && !Globals.IsDebugMode)
+			if (Globals.IsRunningFromUIApp)
 				throw new EpicGamesException(Globals.EglIsRunningMsg) { ErrorCode = EpicGamesErrorCode.LibraryAccessWhileEGLRunning };
 		}
 
