@@ -1,7 +1,7 @@
 # EpicGamesImportTool
 [![.NET](https://github.com/Letoonik/EpicGamesImportTool/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Letoonik/EpicGamesImportTool/actions/workflows/dotnet.yml)
 
-A tool that allows to import previously installed games, mostly useful when they disappeared from the library after a reinstall
+A tool that allows to import previously installed games, mostly useful when they disappeared from the library after a reinstall.
 
 1. Pick a folder and click "Scan" to search for Epic Game entries in all subfolders.
 2. Select all games (Ctrl + A) and click "Import selected" to add all found games to your Epic Games Launcher library.
