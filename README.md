@@ -11,3 +11,4 @@ When you open the Epic Game Launcher afterwards and go into your library, it wil
 Note: Probably doesn't work for Unreal Engine Installations (at least it didnt work for me).
 
 ## This repo was forked from https://github.com/FFouetil/EpicGamesImportTool. It was a little broken, so I fixed it (by randomly adding some imports in the C# files) and provided propper binaries in a zip file. All credit goes to FFouetil.
+![-](https://raw.githubusercontent.com/Letoonik/EpicGamesImportTool/main/.github/workflows/pic.png)
