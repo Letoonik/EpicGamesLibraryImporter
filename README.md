@@ -8,4 +8,4 @@ A tool that allows to import previously installed games, mostly useful when they
 
 When you open the Epic Game Launcher afterwards and go into your library, it will take a little while to scan, validate, and fix missing metadata for every game you just added.
 
-# This repo was forked from https://github.com/FFouetil/EpicGamesImportTool. It was a little broken, so I fixed it (by randomly adding some imports in the C# files) and provided propper binaries in a zip file. All credit goes to FFouetil.
+## This repo was forked from https://github.com/FFouetil/EpicGamesImportTool. It was a little broken, so I fixed it (by randomly adding some imports in the C# files) and provided propper binaries in a zip file. All credit goes to FFouetil.
