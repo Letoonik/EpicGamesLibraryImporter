@@ -1,4 +1,5 @@
 # EpicGamesImportTool
+[![.NET](https://github.com/Letoonik/EpicGamesImportTool/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Letoonik/EpicGamesImportTool/actions/workflows/dotnet.yml)
 A tool that allows to import previously installed games, mostly useful when they disappeared from the library after a reinstall
 
 At the moment, it's roughly functionnal.
