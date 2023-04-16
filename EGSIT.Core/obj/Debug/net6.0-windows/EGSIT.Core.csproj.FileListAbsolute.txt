@@ -1,0 +1,12 @@
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\obj\Debug\net6.0-windows\EGSIT.Core.csproj.AssemblyReference.cache
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\obj\Debug\net6.0-windows\EGSIT.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\obj\Debug\net6.0-windows\EGSIT.Core.AssemblyInfoInputs.cache
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\obj\Debug\net6.0-windows\EGSIT.Core.AssemblyInfo.cs
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\obj\Debug\net6.0-windows\EGSIT.Core.csproj.CoreCompileInputs.cache
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\bin\Debug\net6.0-windows\EGSIT.Core.deps.json
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\bin\Debug\net6.0-windows\EGSIT.Core.dll
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\bin\Debug\net6.0-windows\EGSIT.Core.pdb
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\obj\Debug\net6.0-windows\EGSIT.Core.dll
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\obj\Debug\net6.0-windows\refint\EGSIT.Core.dll
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\obj\Debug\net6.0-windows\EGSIT.Core.pdb
+C:\Users\Leon\Downloads\EpicGamesImportTool-main\EGSIT.Core\obj\Debug\net6.0-windows\ref\EGSIT.Core.dll

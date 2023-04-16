@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Leon\\Downloads\\EpicGamesImportTool-main\\EGSIT.UI\\EGSIT.UI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Leon\\Downloads\\EpicGamesImportTool-main\\EGSIT.Core\\EGSIT.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Leon\\Downloads\\EpicGamesImportTool-main\\EGSIT.Core\\EGSIT.Core.csproj",
+        "projectName": "EGSIT.Core",
+        "projectPath": "C:\\Users\\Leon\\Downloads\\EpicGamesImportTool-main\\EGSIT.Core\\EGSIT.Core.csproj",
+        "packagesPath": "C:\\Users\\Leon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Leon\\Downloads\\EpicGamesImportTool-main\\EGSIT.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Leon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Data.OleDb": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "WinCopies.WindowsAPICodePack.Shell": {
+              "target": "Package",
+              "version": "[3.4.0-preview, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Leon\\Downloads\\EpicGamesImportTool-main\\EGSIT.UI\\EGSIT.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Leon\\Downloads\\EpicGamesImportTool-main\\EGSIT.UI\\EGSIT.UI.csproj",
+        "projectName": "EGSIT.UI",
+        "projectPath": "C:\\Users\\Leon\\Downloads\\EpicGamesImportTool-main\\EGSIT.UI\\EGSIT.UI.csproj",
+        "packagesPath": "C:\\Users\\Leon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Leon\\Downloads\\EpicGamesImportTool-main\\EGSIT.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Leon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "C:\\Users\\Leon\\Downloads\\EpicGamesImportTool-main\\EGSIT.Core\\EGSIT.Core.csproj": {
+                "projectPath": "C:\\Users\\Leon\\Downloads\\EpicGamesImportTool-main\\EGSIT.Core\\EGSIT.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "WinCopies.WindowsAPICodePack": {
+              "target": "Package",
+              "version": "[3.4.0-preview, )"
+            },
+            "WinCopies.WindowsAPICodePack.Shell": {
+              "target": "Package",
+              "version": "[3.4.0-preview, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
