@@ -10,5 +10,10 @@ When you open the Epic Game Launcher afterwards and go into your library, it wil
 
 Note: Probably doesn't work for Unreal Engine Installations (at least it didnt work for me).
 
+# How to compile
+1. Install Visual Studio C# .NET SDK 6.0
+2. Download the repo and run `dotnet build --configuration=Release` in cmd
+3. The binary will appear in `..\EpicGamesImportTool-main\EGSIT.UI\bin\Release\net6.0-windows\EGSIT.UI.exe`
+
 ## This repo was forked from https://github.com/FFouetil/EpicGamesImportTool. It was a little broken, so I fixed it (by randomly adding some imports in the C# files) and provided propper binaries in a zip file. All credit goes to FFouetil.
 ![-](https://raw.githubusercontent.com/Letoonik/EpicGamesImportTool/main/.github/workflows/pic.png)
