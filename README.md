@@ -12,7 +12,7 @@ Note: Probably doesn't work for Unreal Engine Installations (at least it didnt w
 
 # How to compile
 1. Install the C# 7.0 .NET SDK 
-2. Download the repo and run `dotnet build --configuration=Release` in cmd
+2. Download the repo and run `dotnet build --configuration=Release` in Command Prompt
 3. The binary will appear in `..\EpicGamesImportTool-main\EGSIT.UI\bin\Release\net6.0-windows\EGSIT.UI.exe`
 
 ## This repo was forked from https://github.com/FFouetil/EpicGamesImportTool. It was a little broken, so I fixed it (by randomly adding some imports in the C# files) and provided propper binaries in a zip file. All credit goes to FFouetil.
