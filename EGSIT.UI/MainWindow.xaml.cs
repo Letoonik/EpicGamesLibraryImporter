@@ -1,4 +1,4 @@
-﻿using EGSIT.Core.FileHandling;
+using EGSIT.Core.FileHandling;
 using EGSIT.Core;
 
 using System;
