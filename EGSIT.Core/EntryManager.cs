@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,9 +7,7 @@ using System.Diagnostics;
 using EGSIT.Core.Exceptions;
 using EGSIT.Core.FileHandling;
 using System.IO;
-using System;
 using System.Windows.Forms;
-using System.IO;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
