@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.ComponentModel;
@@ -9,9 +9,8 @@ using System.Data;
 using System.Data.OleDb;
 using System.IO;
 using System.Diagnostics;
-using System;
 using System.Windows.Forms;
-using System.IO;
+
 namespace EGSIT.Core.FileHandling;
 
 public static class FileSearch
