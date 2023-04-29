@@ -1,4 +1,4 @@
-# EpicGamesImportTool
+# Epic Games Launcher Import Tool
 [![.NET](https://github.com/Letoonik/EpicGamesImportTool/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Letoonik/EpicGamesImportTool/actions/workflows/dotnet.yml) ![GitHub all releases](https://img.shields.io/github/downloads/Letoonik/EpicGamesImportTool/total?color=34cf58&logo=github)
 
 A tool that allows to import previously installed games, mostly useful when they disappeared from the library after a reinstall.
