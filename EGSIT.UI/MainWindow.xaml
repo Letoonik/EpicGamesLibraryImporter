@@ -7,7 +7,7 @@
         xmlns:Controls="clr-namespace:EGSIT.UI.Controls" x:Class="EGSIT.UI.MainWindow"
         mc:Ignorable="d"
 
-        Title="MainWindow" Height="960" Width="1280" Loaded="Window_Loaded" Background="#BFFFFFFF">
+        Title="Epic Games Launcher Import Tool" Height="960" Width="1280" Loaded="Window_Loaded" Background="#BFFFFFFF">
 	<Grid >
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" ></RowDefinition>
