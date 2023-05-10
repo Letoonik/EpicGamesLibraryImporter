@@ -19,6 +19,10 @@ using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Windows.Threading;
 using System.ComponentModel;
 using System.IO;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Imaging;
+
 
 namespace EGSIT.UI;
 
@@ -34,7 +38,7 @@ public partial class MainWindow : Window
 	public MainWindow()
 	{
 		InitializeComponent();
-	}
+    }
 
 
 	private async void Window_Loaded(object sender, RoutedEventArgs e)
@@ -62,7 +66,9 @@ public partial class MainWindow : Window
 			TopToolBar.IsEnabled = true;
 			ScanProgressBarItem.Visibility = Visibility.Collapsed;
 			EntryListControl.ScanBackgroundWorker.RunWorkerCompleted -= _OnCompleted;
-		}
+            ScanSourceList.ShowGridLines = true;
+
+        }
 
 		var path = BrowsePathTextBlock.Text;
 		TopToolBar.IsEnabled = false;
@@ -70,7 +76,8 @@ public partial class MainWindow : Window
 		await Task.Delay(100);
 		EntryListControl.ScanBackgroundWorker.RunWorkerCompleted += _OnCompleted;
 		EntryListControl.ScanAndDisplayGames(path);
-	}
+        ScanSourceList.ShowGridLines = true;
+    }
 
 	private void ScanButton_Click(object sender, RoutedEventArgs e)
 	{
@@ -101,4 +108,9 @@ public partial class MainWindow : Window
 	{
 		EntryListControl.SaveToFile(Globals.InstalledJSONPath);
 	}
+
+    private void EntryListControl_Loaded(object sender, RoutedEventArgs e)
+    {
+
+    }
 }
