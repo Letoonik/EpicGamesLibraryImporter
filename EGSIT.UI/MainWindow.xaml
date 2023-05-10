@@ -7,51 +7,53 @@
         xmlns:Controls="clr-namespace:EGSIT.UI.Controls" x:Class="EGSIT.UI.MainWindow"
         mc:Ignorable="d"
 
-        Title="Epic Games Launcher Import Tool" Height="960" Width="1280" Loaded="Window_Loaded" Background="#BFFFFFFF">
-	<Grid >
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto" ></RowDefinition>
-			<RowDefinition Height="*"></RowDefinition>
-			<RowDefinition Height="30"></RowDefinition>
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<!--<ColumnDefinition Width="0.0025*"></ColumnDefinition>-->
-			<ColumnDefinition Width="0.75*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
+        Title="Epic Games Launcher Import Tool" Height="960" Width="1280" Loaded="Window_Loaded" Background="#1a1a1a">
+    
+    
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" ></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <!--<ColumnDefinition Width="0.0025*"></ColumnDefinition>-->
+            <ColumnDefinition Width="0.75*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-		<Grid x:Name="TopToolBar" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Height="Auto" >
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="Auto"></ColumnDefinition>
-				<ColumnDefinition Width="*"></ColumnDefinition>
-				<ColumnDefinition Width="Auto"></ColumnDefinition>
-			</Grid.ColumnDefinitions>
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-			</Grid.RowDefinitions>
-			<Button x:Name="OpenFolderButton"  Margin="5,0,5,0" Padding="5 0" Content="Select folder" Click="OpenFolderButton_Click" Height="20" VerticalAlignment="Center"/>
-			<TextBox x:Name="BrowsePathTextBlock" Grid.Column="1" VerticalAlignment="Center" Padding="5 0" Background="White" InputScope="FullFilePath" Margin="0,0,0,0" Height="20">C:\</TextBox>
-			<Button x:Name="ScanButton"  Margin="5" Padding="5 0" Content="Scan"  Grid.Column="2" Click="ScanButton_Click" Height="20"/>
-			<WrapPanel HorizontalAlignment="Left" Height="Auto" Margin="5,0,0,0" Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="99" VerticalAlignment="Center">
-				<CheckBox Visibility="Collapsed" d:Visibility="Visible" Margin="0,0,10,0" Content="Scan subfolders recursively" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True"/>
-				<CheckBox Visibility="Collapsed" d:Visibility="Visible" Content="Use Windows Search (experimental)"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
-			</WrapPanel>
-		</Grid>
+        <Grid x:Name="TopToolBar" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Height="Auto" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="OpenFolderButton" Background="#333333" Foreground="#EEEEEE" Margin="5,0,5,0" Padding="5 0" Content="Select folder" Click="OpenFolderButton_Click" Height="20" VerticalAlignment="Center"/>
+            <TextBox x:Name="BrowsePathTextBlock" Background="#333333" Foreground="#EEEEEE" Grid.Column="1" VerticalAlignment="Center" Padding="5 0" InputScope="FullFilePath" Margin="0,0,0,0" Height="20">C:\</TextBox>
+            <Button x:Name="ScanButton" Background="#333333" Foreground="#EEEEEE" Margin="5" Padding="5 0" Content="Scan"  Grid.Column="2" Click="ScanButton_Click" Height="20"/>
+            <WrapPanel HorizontalAlignment="Left" Height="Auto" Margin="5,0,0,0" Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="99" VerticalAlignment="Center">
+                <CheckBox Background="#333333" Foreground="#EEEEEE" Visibility="Collapsed" d:Visibility="Visible" Margin="0,0,10,0" Content="Scan subfolders recursively" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True"/>
+                <CheckBox Background="#333333" Foreground="#EEEEEE" Visibility="Collapsed" d:Visibility="Visible" Content="Use Windows Search (experimental)"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </WrapPanel>
+        </Grid>
 
-		<Grid x:Name="ScanSourceList"  Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" />
-		<Controls:EntryList x:Name="EntryListControl"  Grid.Row="1" Grid.Column="1"  VerticalAlignment="Stretch" Padding="5" />
-		<StatusBar VerticalAlignment="Stretch" Grid.Row="2" Grid.ColumnSpan="99" Height="Auto" Background="{x:Null}" Margin="5,0,5,0" >
-			<StatusBarItem  x:Name="ScanProgressBarItem" Visibility="Collapsed" d:Visibility="Visible" Padding="0,0,0,0">
-				<WrapPanel >
-					<ProgressBar Width="200" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Height="20" IsIndeterminate="True" Value="50" Background="White"/>
-					<TextBlock Text="Scanning folder for games" VerticalAlignment="Center" Margin="5 0" />
-				</WrapPanel>
-			</StatusBarItem>
-			<StatusBarItem HorizontalAlignment="Right">
-				<Button x:Name="ImportButton" Padding="5 0" Content="Import selected" Click="ImportButton_Click" Height="24" HorizontalAlignment="Right" Width="Auto" Background="#FF96FF9F" FontWeight="Bold"/>
 
-			</StatusBarItem>
-		</StatusBar>
 
-	</Grid>
+        <Grid x:Name="ScanSourceList" Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch"/>
+        <Controls:EntryList x:Name="EntryListControl" Padding="5" Loaded="EntryListControl_Loaded" Margin="-5,45,5,0" Grid.RowSpan="2"/>
+        <StatusBar VerticalAlignment="Stretch" Grid.Row="2" Grid.ColumnSpan="99" Height="Auto" Background="{x:Null}" Margin="5,0,5,0" >
+            <StatusBarItem  x:Name="ScanProgressBarItem" Visibility="Collapsed" d:Visibility="Visible" Padding="0,0,0,0">
+                <WrapPanel >
+                    <ProgressBar HorizontalAlignment="Left" Width="1000" Height="20" IsIndeterminate="true" Value="500" Background="#333333"/>
+                    <TextBlock Text="Scanning folder for games..." VerticalAlignment="Center" Margin="5 0" Foreground="#EEEEEE"/>
+                </WrapPanel>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <Button x:Name="ImportButton" Padding="5 0" Content="Import selected" Click="ImportButton_Click" Height="24" HorizontalAlignment="Right" Width="Auto" Background="#0d1117" Foreground="#EEEEEE" FontWeight="Bold"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
 </Window>
