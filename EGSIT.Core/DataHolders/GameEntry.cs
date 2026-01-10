@@ -49,7 +49,7 @@ public class GameEntry
 		m_data[ItemIdKey] = scannedEntry.CatalogItemId;
 		m_data[NamespaceIDKey] = scannedEntry.CatalogNamespace;
 		m_data[AppNameKey] = scannedEntry.AppName;
-		m_data[AppVersionKey] = "";
+		m_data[AppVersionKey] = "1.0.0";
 		m_data[ArtifactIdKey] = "";
 		m_manifestItem = new(scannedEntry);
 	}

@@ -38,8 +38,10 @@ public class MANCPNEntry
 	/// <summary>Matches <see cref="GameEntry.AppNameKey"/> ("Yay!" for consistent naming) and seemingly <see cref="GameEntry.ArtifactIdKey"/> too.</summary>
 	public string AppName { get; private set; }
 
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-	private MANCPNEntry(string filePath, string gamePath)
+	public string AppVersion { get; private set; }
+
+	#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+    private MANCPNEntry(string filePath, string gamePath)
 	{
 		FilePath = filePath;
 		GamePath = gamePath;
@@ -62,7 +64,9 @@ public class MANCPNEntry
 
 		if (jsonAsDic.TryGetValue("AppName", out var an))
 			AppName = an;
-	}
+
+
+    }
 
 	/// <summary>Create an instance using data from a specific file.</summary>
 	/// <param name="filePath">Path of the file to read content from</param>

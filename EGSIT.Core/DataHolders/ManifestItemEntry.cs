@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System;
 using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json;
@@ -46,11 +45,13 @@ public class ManifestItemEntry
 		m_content.Add(new JProperty("ManifestLocation", mancpn.GamePath+"/.egstore"));
 		m_content.Add(new JProperty("StagingLocation", mancpn.GamePath + "/.egstore/bps"));
 		m_content.Add(new JProperty("bIsIncompleteInstall", false));
-		//m_content.Add(new JProperty("bNeedsValidation", true));
+		m_content.Add(new JProperty("AppVersionString", "1.0.0"));
 
-	}
+        //m_content.Add(new JProperty("bNeedsValidation", true));
 
-	public void SaveToFile()
+    }
+
+    public void SaveToFile()
 	{
 		var filePath = Path.Combine(Globals.ManifestFolderPath, ItemFileName);
 		try

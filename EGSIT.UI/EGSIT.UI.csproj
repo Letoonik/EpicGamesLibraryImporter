@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <StartupObject>EGSIT.UI.App</StartupObject>
@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.1" />
     <PackageReference Include="WinCopies.WindowsAPICodePack" Version="3.4.0-preview" />
     <PackageReference Include="WinCopies.WindowsAPICodePack.Shell" Version="3.4.0-preview" />
   </ItemGroup>
