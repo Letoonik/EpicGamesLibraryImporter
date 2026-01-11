@@ -46,6 +46,7 @@ public class ManifestItemEntry
 		m_content.Add(new JProperty("ManifestLocation", mancpn.GamePath+"/.egstore"));
 		m_content.Add(new JProperty("StagingLocation", mancpn.GamePath + "/.egstore/bps"));
 		m_content.Add(new JProperty("bIsIncompleteInstall", false));
+		m_content.Add(new JProperty("AppVersionString", "0"));
 		//m_content.Add(new JProperty("bNeedsValidation", true));
 
 	}
